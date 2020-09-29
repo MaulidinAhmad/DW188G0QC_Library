@@ -11,6 +11,9 @@
 # production
 /build
 
+#file
+./exTailwind.config.js
+
 # misc
 .DS_Store
 .env.local
