@@ -5,6 +5,10 @@
 
 @tailwind utilities;
 
+.text-title {
+    font-family: 'Times New Roman';
+}
+
 .title-landing {
 
     /* width: 572px;
@@ -34,4 +38,9 @@
 
     color: #000000;
 
+}
+
+.active {
+    color: white;
+    background-color: #EE4622;
 }

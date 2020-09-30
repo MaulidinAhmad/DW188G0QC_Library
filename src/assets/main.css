@@ -21157,6 +21157,10 @@ video {
           animation: bounce 1s infinite;
 }
 
+.text-title {
+  font-family: 'Times New Roman';
+}
+
 .title-landing {
   /* width: 572px;
     height: 182px; */
@@ -21178,6 +21182,11 @@ video {
   font-size: 24px;
   line-height: 33px;
   color: #000000;
+}
+
+.active {
+  color: white;
+  background-color: #EE4622;
 }
 
 @media (min-width: 640px) {
