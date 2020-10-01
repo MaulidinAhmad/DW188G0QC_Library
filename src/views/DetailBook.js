@@ -1,5 +1,6 @@
 import React from "react";
-import { FaBookmark } from "react-icons/fa";
+import { FaRegBookmark } from "react-icons/fa";
+import { AiOutlineRight } from "react-icons/ai";
 import { useParams } from "react-router-dom";
 import Title from "../components/Title";
 import { books } from "../dummyData/bookData";
@@ -64,13 +65,14 @@ function DetailBook(props) {
       <div className="flex w-full justify-end">
         <div className="">
           <button className="bg-orange-custom text-white px-4 mr-4 py-3 rounded-md text-lg flex">
-            Category
-            <FaBookmark className="ml-2 place-self-center" />
+            Add Library
+            <FaRegBookmark className="ml-2 place-self-center" />
           </button>
         </div>
         <div>
-          <button className="bg-gray-200 px-4 py-3 rounded-md text-lg">
-            <span className="mr-2">{"<"}</span>Category
+          <button className="bg-gray-200 px-4 flex  py-3 rounded-md text-lg">
+            Read Book
+            <AiOutlineRight className="ml-3 place-self-center" />
           </button>
         </div>
       </div>
