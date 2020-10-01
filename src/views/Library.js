@@ -9,11 +9,6 @@ function Library(props) {
       {/* Library */}
       <div className="flex place-content-between">
         <Title name="My Library" />
-        <div className="">
-          <button className="bg-gray-200 px-4 py-3 rounded-md text-lg">
-            <span className="mr-2">{"<"}</span>Category
-          </button>
-        </div>
       </div>
       {/* card */}
       <div>
