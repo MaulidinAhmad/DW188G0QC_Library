@@ -1,11 +1,19 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 function Book(props) {
+  const history = useHistory();
   return (
     <div>
-      <div className="">
+      <div
+        className=""
+        onClick={() => history.push(`/detail/${props.data.id}`)}
+      >
         <div>
-          <img src={props.data.img} alt="" />
+          <img
+            src={require("../assets/image/books/" + props.data.img)}
+            alt=""
+          />
         </div>
         <div>
           <h1 className="text-title text-2xl font-bold leading-7 mt-4 mb-2">

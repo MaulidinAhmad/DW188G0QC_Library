@@ -1,6 +1,6 @@
 import React from "react";
-import imgBook from "../assets/image/book.png";
 import Book from "../components/Book";
+import { books } from "../dummyData/bookData";
 import Title from "../components/Title";
 
 function Library(props) {
@@ -18,10 +18,17 @@ function Library(props) {
       {/* card */}
       <div>
         <div className="grid grid-cols-4 gap-10">
-          <Book data={{ img: imgBook, title: "test", writer: "test" }}></Book>
-          <Book data={{ img: imgBook, title: "test", writer: "test" }}></Book>
-          <Book data={{ img: imgBook, title: "test", writer: "test" }}></Book>
-          <Book data={{ img: imgBook, title: "test", writer: "test" }}></Book>
+          {books.map((book, index) => (
+            <Book
+              key={index}
+              data={{
+                id: book.id,
+                img: book.img,
+                title: book.title,
+                writer: book.writer,
+              }}
+            ></Book>
+          ))}
         </div>
       </div>
     </div>

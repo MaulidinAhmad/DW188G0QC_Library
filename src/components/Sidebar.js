@@ -17,27 +17,27 @@ function Sidebar({ children }) {
               className="border-4 border-white shadow-xl mb-6 rounded-full mx-auto"
               style={imgStyle}
             ></div>
-            <p className="text-2xl font-extrabold leading-7">Egi Ganteng</p>
+            <p className="text-2xl font-extrabold leading-7">Ahmad Maul</p>
           </div>
           <div className="block w-3/4 mb-12">
             <hr className="w-full bg-black" style={{ color: "black" }} />
           </div>
           <NavLink
-            className="items-center inline-flex rounded-full mb-6 hover:bg-orange-custom w-3/4 hover:text-white border-xl py-4 text-gray-600 text-2xl text-left pl-6"
+            className="items-center inline-flex content-center rounded-full mb-6 hover:bg-orange-custom w-3/4 hover:text-white border-xl py-4 text-gray-600 text-2xl text-left pl-6"
             to="/profile"
           >
             <BiUser className="mr-4" />
             Profile
           </NavLink>
           <NavLink
-            className="items-center inline-flex rounded-full mb-6 hover:bg-orange-custom w-3/4 hover:text-white border-xl py-4 text-gray-600 text-2xl text-left pl-6"
+            className="items-center inline-flex content-center rounded-full mb-6 hover:bg-orange-custom w-3/4 hover:text-white border-xl py-4 text-gray-600 text-2xl text-left pl-6"
             to="/library"
           >
             <BiBook className="mr-4" />
             My Library
           </NavLink>
           <NavLink
-            className="items-center inline-flex rounded-full mb-6 hover:bg-orange-custom w-3/4 hover:text-white border-xl py-4 text-gray-600 text-2xl text-left pl-6"
+            className="items-center inline-flex content-center rounded-full mb-6 hover:bg-orange-custom w-3/4 hover:text-white border-xl py-4 text-gray-600 text-2xl text-left pl-6"
             to="/add"
           >
             <BiBookAdd className="mr-4" />
@@ -47,7 +47,7 @@ function Sidebar({ children }) {
             <hr className="w-full bg-black" style={{ color: "black" }} />
           </div>
           <NavLink
-            className="items-center inline-flex rounded-full mb-6 hover:bg-orange-custom w-3/4 hover:text-white border-xl py-4 text-gray-600 text-2xl text-left pl-6"
+            className="items-center inline-flex content-center rounded-full mb-6 hover:bg-orange-custom w-3/4 hover:text-white border-xl py-4 text-gray-600 text-2xl text-left pl-6"
             to="/logout"
           >
             <BiLogOut className="mr-4" />
@@ -55,7 +55,7 @@ function Sidebar({ children }) {
           </NavLink>
         </div>
       </div>
-      <div className="md:col-span-9 mb-8 col-span-12 sm:pl-2 mt-20">
+      <div className="md:col-span-9 mb-8 col-span-12 sm:pl-2 mt-16">
         {children}
       </div>
     </div>

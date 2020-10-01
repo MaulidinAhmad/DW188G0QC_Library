@@ -30,8 +30,7 @@ export default function SignupModal(props) {
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-full">
                         <input
-                          class="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                          id="inline-full-name"
+                          className="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                           type="text"
                           value=""
                           name="email"
@@ -42,8 +41,7 @@ export default function SignupModal(props) {
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-full">
                         <input
-                          class="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                          id="inline-full-name"
+                          className="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                           type="password"
                           value=""
                           name="password"
@@ -54,8 +52,7 @@ export default function SignupModal(props) {
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-full">
                         <input
-                          class="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                          id="inline-full-name"
+                          className="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                           type="text"
                           value=""
                           name="full_name"
@@ -66,12 +63,10 @@ export default function SignupModal(props) {
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-full">
                         <select
-                          class="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                          className="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                           id="grid-state"
                         >
-                          <option selected disabled>
-                            Gender
-                          </option>
+                          <option disabled>Gender</option>
                           <option value="male">Male</option>
                           <option value="female">Female</option>
                         </select>
@@ -80,8 +75,7 @@ export default function SignupModal(props) {
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-full">
                         <input
-                          class="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                          id="inline-full-name"
+                          className="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                           type="text"
                           value=""
                           name="gender"
@@ -92,8 +86,7 @@ export default function SignupModal(props) {
                     <div className="md:flex md:items-center mb-6">
                       <div className="md:w-full">
                         <input
-                          class="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                          id="inline-full-name"
+                          className="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                           type="text"
                           value=""
                           name="address"

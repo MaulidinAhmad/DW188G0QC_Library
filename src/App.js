@@ -23,7 +23,7 @@ function App() {
             <AddBook />
           </Sidebar>
         </Route>
-        <Route path="/detail">
+        <Route path="/detail/:id">
           <Sidebar>
             <DetailBook />
           </Sidebar>

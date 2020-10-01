@@ -1,8 +1,8 @@
 import React from "react";
 import imgBanner from "../assets/image/index_banner.png";
 import Book from "../components/Book";
-import imgBook from "../assets/image/book.png";
 import Title from "../components/Title";
+import { books } from "../dummyData/bookData";
 
 function Index(props) {
   return (
@@ -14,7 +14,7 @@ function Index(props) {
       >
         <div className="grid grid-cols-12 px-16">
           {/* left col */}
-          <div className="col-span-8 py-20">
+          <div className="sm:col-span-12 md:col-span-8 py-20">
             <p
               className="text-6xl font-bold font-sans text-title"
               style={{
@@ -27,7 +27,7 @@ function Index(props) {
             <p className="mt-4 text-2xl">Reading is fascinating</p>
           </div>
           {/* right col */}
-          <div className="col-span-4 py-8">
+          <div className="hidden md:block col-span-4 py-8">
             <img src={imgBanner} alt="" />
           </div>
           <div className="hidden md:block" style={line1}></div>
@@ -48,10 +48,17 @@ function Index(props) {
         {/* card */}
         <div>
           <div className="grid grid-cols-4 gap-10">
-            <Book data={{ img: imgBook, title: "test", writer: "test" }}></Book>
-            <Book data={{ img: imgBook, title: "test", writer: "test" }}></Book>
-            <Book data={{ img: imgBook, title: "test", writer: "test" }}></Book>
-            <Book data={{ img: imgBook, title: "test", writer: "test" }}></Book>
+            {books.map((book, index) => (
+              <Book
+                key={index}
+                data={{
+                  id: book.id,
+                  img: book.img,
+                  title: book.title,
+                  writer: book.writer,
+                }}
+              ></Book>
+            ))}
           </div>
         </div>
       </div>
