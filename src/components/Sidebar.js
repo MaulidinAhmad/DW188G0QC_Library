@@ -7,6 +7,7 @@ import { LoginContext } from "../context/loginContext";
 
 function Sidebar(props) {
   const history = useHistory();
+  // eslint-disable-next-line
   const [state, dispatch] = useContext(LoginContext);
 
   return (

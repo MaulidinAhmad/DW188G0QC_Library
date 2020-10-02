@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { LoginContext } from "../context/loginContext";
 
 export default function LoginModal(props) {
+  // eslint-disable-next-line
   const [state, dispatch] = useContext(LoginContext);
   const [formData, setFormData] = useState({
     email: "ahmad@gmail.com",
