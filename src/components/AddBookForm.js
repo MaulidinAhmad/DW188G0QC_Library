@@ -9,7 +9,7 @@ function AddBookForm(props) {
           <div className="w-full px-3">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-title"
+              htmlFor="grid-title"
             >
               Title
             </label>
@@ -25,7 +25,7 @@ function AddBookForm(props) {
           <div className="w-full px-3">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-date"
+              htmlFor="grid-date"
             >
               Publication Date
             </label>
@@ -41,7 +41,7 @@ function AddBookForm(props) {
           <div className="w-full px-3">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-category"
+              htmlFor="grid-category"
             >
               Category
             </label>
@@ -57,7 +57,7 @@ function AddBookForm(props) {
           <div className="w-full px-3">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-pages"
+              htmlFor="grid-pages"
             >
               Pages
             </label>
@@ -73,7 +73,7 @@ function AddBookForm(props) {
           <div className="w-full px-3">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-isbn"
+              htmlFor="grid-isbn"
             >
               ISBN
             </label>
@@ -89,7 +89,7 @@ function AddBookForm(props) {
           <div className="w-full px-3">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-about"
+              htmlFor="grid-about"
             >
               About
             </label>
@@ -106,7 +106,7 @@ function AddBookForm(props) {
           <div className="w-full px-3">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-about"
+              htmlFor="grid-about"
             >
               File
             </label>

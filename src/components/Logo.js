@@ -11,7 +11,7 @@ function Logo(props) {
           style={{
             width: "175px",
             height: "50px",
-            marginTop: "30px",
+            marginTop: "0px",
           }}
           alt=""
         />

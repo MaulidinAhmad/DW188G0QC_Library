@@ -1,63 +1,62 @@
 import React from "react";
 import Logo from "./Logo";
 import userImage from "../assets/image/user1.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { BiBook, BiBookAdd, BiLogOut, BiUser } from "react-icons/bi";
 
-function Sidebar({ children }) {
+function Sidebar(props) {
+  const history = useHistory();
+
   return (
-    <div className="grid grid-cols-12 content-center md:pr-16">
-      <div className="col-span-3">
-        <div className="md:flex hidden flex-col items-center pr-2 pl-4 py-2">
-          <div className="mb-10">
-            <Logo />
-          </div>
-          <div className="mb-16">
-            <div
-              className="border-4 border-white shadow-xl mb-6 rounded-full mx-auto"
-              style={imgStyle}
-            ></div>
-            <p className="text-2xl font-extrabold leading-7">Ahmad Maul</p>
-          </div>
-          <div className="block w-3/4 mb-12">
-            <hr className="w-full bg-black" style={{ color: "black" }} />
-          </div>
-          <NavLink
-            className="items-center inline-flex content-center rounded-full mb-6 hover:bg-orange-custom w-3/4 hover:text-white border-xl py-4 text-gray-600 text-2xl text-left pl-6"
-            to="/profile"
-          >
-            <BiUser className="mr-4" />
-            Profile
-          </NavLink>
-          <NavLink
-            className="items-center inline-flex content-center rounded-full mb-6 hover:bg-orange-custom w-3/4 hover:text-white border-xl py-4 text-gray-600 text-2xl text-left pl-6"
-            to="/library"
-          >
-            <BiBook className="mr-4" />
-            My Library
-          </NavLink>
-          <NavLink
-            className="items-center inline-flex content-center rounded-full mb-6 hover:bg-orange-custom w-3/4 hover:text-white border-xl py-4 text-gray-600 text-2xl text-left pl-6"
-            to="/add"
-          >
-            <BiBookAdd className="mr-4" />
-            Add Book
-          </NavLink>
-          <div className="block w-3/4 mb-12">
-            <hr className="w-full bg-black" style={{ color: "black" }} />
-          </div>
-          <NavLink
-            className="items-center inline-flex content-center rounded-full mb-6 hover:bg-orange-custom w-3/4 hover:text-white border-xl py-4 text-gray-600 text-2xl text-left pl-6"
-            to="/logout"
-          >
-            <BiLogOut className="mr-4" />
-            Logout
-          </NavLink>
-        </div>
+    <div className="md:flex hidden flex-col items-center pr-2 pl-4 py-2">
+      <div className="mb-6 mt-5">
+        <Logo />
       </div>
-      <div className="md:col-span-9 mb-8 col-span-12 sm:pl-2 mt-16">
-        {children}
+      <div className="mb-10">
+        <div
+          className="border-4 border-white shadow-xl mb-6 rounded-full mx-auto"
+          style={imgStyle}
+        ></div>
+        <p className="text-xl font-extrabold leading-7">Ahmad Maul</p>
       </div>
+      <div className="block w-3/4 mb-8">
+        <hr className="w-full bg-black" style={{ color: "black" }} />
+      </div>
+
+      <NavLink
+        className="items-center inline-flex content-center rounded-full mb-4 hover:bg-orange-custom w-3/5 hover:text-white border-xl py-3 text-gray-600 text-xl text-left pl-6"
+        to="/profile"
+      >
+        <BiUser className="mr-4" />
+        Profile
+      </NavLink>
+      <NavLink
+        className="items-center inline-flex content-center rounded-full mb-4 hover:bg-orange-custom w-3/5 hover:text-white border-xl py-3 text-gray-600 text-xl text-left pl-6"
+        to="/library"
+      >
+        <BiBook className="mr-4" />
+        My Library
+      </NavLink>
+      <NavLink
+        className="items-center inline-flex content-center rounded-full mb-4 hover:bg-orange-custom w-3/5 hover:text-white border-xl py-3 text-gray-600 text-xl text-left pl-6"
+        to="/add"
+      >
+        <BiBookAdd className="mr-4" />
+        Add Book
+      </NavLink>
+      <div className="block w-3/4 mb-8">
+        <hr className="w-full bg-black" style={{ color: "black" }} />
+      </div>
+      <button
+        onClick={() => {
+          localStorage.removeItem("isLogin");
+          history.push("/");
+        }}
+        className="focus:outline-none items-center inline-flex content-center rounded-full mb-4 hover:bg-orange-custom w-3/5 hover:text-white border-xl py-3 text-gray-600 text-xl text-left pl-6"
+      >
+        <BiLogOut className="mr-4" />
+        Logout
+      </button>
     </div>
   );
 }

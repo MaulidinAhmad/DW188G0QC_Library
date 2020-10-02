@@ -19,6 +19,11 @@ module.exports = {
         orange: {
           custom: "#EE4622",
         },
+        danger: "#FF0742",
+        success: "#0ACF83",
+        green: {
+          custom: "#3BB54A",
+        },
       },
     },
   },
