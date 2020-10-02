@@ -85,8 +85,8 @@ export default function SignupModal(props) {
                             className="bg-gray-200 appearance-none border-2 border-gray-600 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                             type="text"
                             value=""
-                            name="gender"
-                            placeholder="Gender"
+                            name="phone"
+                            placeholder="Phone"
                           />
                         </div>
                       </div>

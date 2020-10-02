@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Logo from "./Logo";
 import userImage from "../assets/image/user1.png";
 import { NavLink, useHistory } from "react-router-dom";
 import { BiBook, BiBookAdd, BiLogOut, BiUser } from "react-icons/bi";
+import { LoginContext } from "../context/loginContext";
 
 function Sidebar(props) {
   const history = useHistory();
+  const [state, dispatch] = useContext(LoginContext);
 
   return (
     <div className="md:flex hidden flex-col items-center pr-2 pl-4 py-2">
@@ -50,6 +52,9 @@ function Sidebar(props) {
       <button
         onClick={() => {
           localStorage.removeItem("isLogin");
+          dispatch({
+            type: "LOGOUT",
+          });
           history.push("/");
         }}
         className="focus:outline-none items-center inline-flex content-center rounded-full mb-4 hover:bg-orange-custom w-3/5 hover:text-white border-xl py-3 text-gray-600 text-xl text-left pl-6"

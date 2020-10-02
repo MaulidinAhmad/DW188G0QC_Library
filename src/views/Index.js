@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import imgBanner from "../assets/image/index_banner.png";
 import Book from "../components/Book";
 import Title from "../components/Title";
 import { books } from "../dummyData/bookData";
-
+import { LoginContext } from "../context/loginContext";
 function Index(props) {
+  const [state] = useContext(LoginContext);
+  console.log(state);
   return (
     <>
       {/* container header */}
