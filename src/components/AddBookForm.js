@@ -95,31 +95,7 @@ function AddBookForm(props) {
             >
               About
             </label>
-            <CKEditor
-              editor={ClassicEditor}
-              data=""
-              onInit={(editor) => {
-                // You can store the "editor" and use when it is needed.
-                console.log("Editor is ready to use!", editor);
-              }}
-              onChange={(event, editor) => {
-                const data = editor.getData();
-                console.log({ event, editor, data });
-              }}
-              onBlur={(event, editor) => {
-                console.log("Blur.", editor);
-              }}
-              onFocus={(event, editor) => {
-                console.log("Focus.", editor);
-              }}
-            />
-            {/* <textarea
-              className="appearance-none block w-full resize-none bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              name="about"
-              placeholder="About"
-              id="grid-about"
-              rows="10"
-            ></textarea> */}
+            <CKEditor editor={ClassicEditor} data="" />
           </div>
         </div>
         <div className="flex flex-wrap mb-6">

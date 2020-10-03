@@ -11,7 +11,7 @@ function Sidebar(props) {
   const [state, dispatch] = useContext(LoginContext);
 
   return (
-    <div className="md:flex hidden flex-col items-center pr-2 pl-4 py-2">
+    <div className="md:flex hidden flex-col items-center pr-2 pl-2 py-1">
       <div className="mb-6 mt-5">
         <Logo />
       </div>
@@ -25,7 +25,6 @@ function Sidebar(props) {
       <div className="block w-3/4 mb-8">
         <hr className="w-full bg-black" style={{ color: "black" }} />
       </div>
-
       <NavLink
         className="items-center inline-flex content-center rounded-full mb-4 hover:bg-orange-custom w-3/5 hover:text-white border-xl py-3 text-gray-600 text-xl text-left pl-6"
         to="/profile"

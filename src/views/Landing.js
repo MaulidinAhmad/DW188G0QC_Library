@@ -12,11 +12,11 @@ function Landing(props) {
     <>
       <div>
         <div className="grid md:grid-cols-2">
-          <div className="pl-custom mb-8">
+          <div className="pl-20 -pl-4 mb-8 mt-6">
             {/* Logo */}
             <Logo />
             {/* Title */}
-            <div className="title-landing" style={{ marginTop: "148px" }}>
+            <div className="title-landing mt-24">
               <h1>
                 Your <span className="not-italic">library anywhere</span>
               </h1>
@@ -45,9 +45,13 @@ function Landing(props) {
               </button>
             </div>
           </div>
-          <div className="hidden md:block">
-            <img src={Image} alt="" />
-          </div>
+          <div
+            className="hidden md:block w-100 min-h-screen"
+            style={{
+              backgroundImage: "url(" + Image + ")",
+              backgroundSize: "cover",
+            }}
+          ></div>
         </div>
       </div>
       <SignupModal toggleHandler={() => setsignup(!signup)} toggle={signup} />

@@ -4,11 +4,16 @@ import { LoginContext } from "../context/loginContext";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const [state] = useContext(LoginContext);
+  console.log(state);
   return (
     <Route
       {...rest}
       render={(props) =>
-        state.isLogin ? <Component {...props} /> : <Redirect to="/" />
+        state.isLogin === "true" ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to="/" />
+        )
       }
     />
   );

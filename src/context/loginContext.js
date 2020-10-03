@@ -3,22 +3,22 @@ import React, { createContext, useReducer } from "react";
 export const LoginContext = createContext();
 
 const initialState = {
-  isLogin: false || localStorage.getItem("isLogin"),
+  isLogin: localStorage.getItem("isLogin") || "false",
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
     case "LOGIN":
-      localStorage.setItem("isLogin", true);
+      localStorage.setItem("isLogin", "true");
       return {
         ...state,
-        isLogin: true,
+        isLogin: "true",
       };
     case "LOGOUT":
-      localStorage.setItem("isLogin", false);
+      localStorage.setItem("isLogin", "false");
       return {
         ...state,
-        isLogin: false,
+        isLogin: "false",
       };
     default:
       throw new Error();
