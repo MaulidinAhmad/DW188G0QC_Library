@@ -4,7 +4,6 @@ import { LoginContext } from "../context/loginContext";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const [state] = useContext(LoginContext);
-  console.log(state);
   return (
     <Route
       {...rest}

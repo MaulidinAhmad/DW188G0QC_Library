@@ -6,7 +6,9 @@ function Book(props) {
   return (
     <div>
       <div
-        className="cursor-pointer"
+        className={`cursor-pointer px-2 py-2  rounded-md ${
+          props.active === "false" ? "bg-gray-200" : ""
+        }`}
         onClick={() => history.push(`/detail/${props.data.id}`)}
       >
         <div>
@@ -17,7 +19,7 @@ function Book(props) {
           />
         </div>
         <div>
-          <h1 className="text-title text-2xl font-bold mt-4 mb-2">
+          <h1 className="text-title text-2xl leading-7 font-bold mt-4 mb-2">
             {props.data.title}
           </h1>
           <p className="text-gray-500">{props.data.writer}</p>

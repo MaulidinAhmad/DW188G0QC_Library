@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Logo from "../components/Logo";
 import Image from "../assets/image/landing.png";
 import SignupModal from "../components/SignupModal";
 import LoginModal from "../components/LoginModal";
+import { LoginContext } from "../context/loginContext";
+import { useHistory } from "react-router-dom";
 
 function Landing(props) {
   const [signup, setsignup] = useState(false);
   const [login, setlogin] = useState(false);
-
+  const [state] = useContext(LoginContext);
+  const history = useHistory();
   return (
     <>
       <div>
@@ -29,20 +32,34 @@ function Landing(props) {
             </div>
             {/* Button  */}
             <div className="flex space-x-8">
-              <button
-                className=" text-white px-20 py-3 mt-6 rounded-md"
-                style={{ background: "#EE4622" }}
-                onClick={() => setsignup(!signup)}
-              >
-                Sign Up
-              </button>
-              <button
-                className=" px-20 py-3 mt-6 rounded-md"
-                style={{ background: "rgba(233, 233, 233, 0.7)" }}
-                onClick={() => setlogin(!login)}
-              >
-                Sign In
-              </button>
+              {state.isLogin === "true" ? (
+                <>
+                  <button
+                    className="focus:outline-none text-white px-20 py-3 mt-6 rounded-md"
+                    style={{ background: "#EE4622" }}
+                    onClick={() => history.push("/index")}
+                  >
+                    Home
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button
+                    className="focus:outline-none text-white px-20 py-3 mt-6 rounded-md"
+                    style={{ background: "#EE4622" }}
+                    onClick={() => setsignup(!signup)}
+                  >
+                    Sign Up
+                  </button>
+                  <button
+                    className="focus:outline-none px-20 py-3 mt-6 rounded-md"
+                    style={{ background: "rgba(233, 233, 233, 0.7)" }}
+                    onClick={() => setlogin(!login)}
+                  >
+                    Sign In
+                  </button>
+                </>
+              )}
             </div>
           </div>
           <div

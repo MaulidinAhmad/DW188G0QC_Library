@@ -107,6 +107,15 @@ function Profile(props) {
                   writer: books[0].writer,
                 }}
               ></Book>
+              <Book
+                active="false"
+                data={{
+                  id: books[0].id,
+                  img: books[0].img,
+                  title: books[0].title,
+                  writer: books[0].writer,
+                }}
+              ></Book>
             </div>
           </div>
         </div>

@@ -33,7 +33,7 @@ export const books = [
     title: "Harry Potter and Goblet of fire",
     writer: "J. K. Rownling",
     publicationDate: "Juli 2020",
-    category: "Sci-Fi",
+    category: "Horror",
     pages: 200,
     isbn: "9848484888",
     about:
@@ -47,7 +47,7 @@ export const books = [
     title: "Tess on the Road",
     writer: "Rachel Hartman",
     publicationDate: "April 2020",
-    category: "Sci-Fi",
+    category: "Action",
     pages: 200,
     isbn: "9848484888",
     about:

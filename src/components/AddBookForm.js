@@ -1,12 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BiBookAdd } from "react-icons/bi";
 import CKEditor from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import Toast from "./Toast";
+import { Transition } from "@tailwindui/react";
 
 function AddBookForm(props) {
+  const [show, setshow] = useState(false);
+  const [data, setdata] = useState({
+    title: "",
+    publication_date: "",
+    category: "",
+    pages: "",
+    isbn: "",
+    about: "",
+    book_file: [],
+  });
+  const {
+    title,
+    publication_date,
+    category,
+    pages,
+    isbn,
+    book_file,
+    about,
+  } = data;
+
+  const handleChange = (e) => {
+    setdata({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const handleAbout = (ckData) => {
+    setdata({ ...data, about: ckData });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(data);
+    setshow(!show);
+  };
+
   return (
     <div>
-      <form className="w-full max-w-full ">
+      <form onSubmit={(e) => handleSubmit(e)} className="w-full max-w-full ">
         <div className="flex flex-wrap mb-6">
           <div className="w-full px-3">
             <label
@@ -20,6 +56,9 @@ function AddBookForm(props) {
               id="grid-title"
               type="text"
               placeholder="Title"
+              name="title"
+              value={title}
+              onChange={(e) => handleChange(e)}
             />
           </div>
         </div>
@@ -36,6 +75,9 @@ function AddBookForm(props) {
               id="grid-date"
               type="text"
               placeholder="Publication Date"
+              name="publication_date"
+              value={publication_date}
+              onChange={(e) => handleChange(e)}
             />
           </div>
         </div>
@@ -52,6 +94,9 @@ function AddBookForm(props) {
               id="grid-category"
               type="text"
               placeholder="Category"
+              name="category"
+              value={category}
+              onChange={(e) => handleChange(e)}
             />
           </div>
         </div>
@@ -66,8 +111,11 @@ function AddBookForm(props) {
             <input
               className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               id="grid-pages"
-              type="text"
+              type="number"
               placeholder="Pages"
+              name="pages"
+              value={pages}
+              onChange={(e) => handleChange(e)}
             />
           </div>
         </div>
@@ -84,6 +132,9 @@ function AddBookForm(props) {
               id="grid-isbn"
               type="text"
               placeholder="ISBN"
+              name="isbn"
+              value={isbn}
+              onChange={(e) => handleChange(e)}
             />
           </div>
         </div>
@@ -95,7 +146,14 @@ function AddBookForm(props) {
             >
               About
             </label>
-            <CKEditor editor={ClassicEditor} data="" />
+            <CKEditor
+              editor={ClassicEditor}
+              onChange={(event, editor) => {
+                const ckData = editor.getData();
+                handleAbout(ckData);
+              }}
+              data={about}
+            />
           </div>
         </div>
         <div className="flex flex-wrap mb-6">
@@ -110,7 +168,9 @@ function AddBookForm(props) {
               className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
               type="file"
               placeholder="Attach Book File"
-              name=""
+              name="book_file"
+              value={book_file}
+              onChange={(e) => handleChange(e)}
               id=""
             />
           </div>
@@ -126,6 +186,11 @@ function AddBookForm(props) {
           </div>
         </div>
       </form>
+      <Toast
+        toggleToast={() => setshow(!show)}
+        show={show}
+        title="Thank you for adding your own books to our website, please wait 1 x 24 hours to verify whether this book is your writing"
+      />
     </div>
   );
 }

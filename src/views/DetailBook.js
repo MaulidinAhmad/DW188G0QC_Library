@@ -1,22 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaRegBookmark } from "react-icons/fa";
 import { AiOutlineRight } from "react-icons/ai";
 import { NavLink, useParams } from "react-router-dom";
 import { books } from "../dummyData/bookData";
+import Toast from "../components/Toast";
 
 function DetailBook(props) {
   const { id } = useParams();
-
+  const [show, setshow] = useState(false);
   const book = books.filter((item) => item.id === parseInt(id));
 
   return (
     <>
-      <div className="py-12 px-4 ">
+      <div className="py-6 px-4 ">
         <div>
           <div className="grid md:grid-cols-2">
             <div>
               <img
-                className="mx-auto w-10/12"
+                className="mx-auto w-9/12"
                 src={require("../assets/image/books/" + book[0].img)}
                 alt=""
               />
@@ -64,7 +65,10 @@ function DetailBook(props) {
         </div>
         <div className="flex w-full justify-end">
           <div className="">
-            <button className="bg-orange-custom text-white px-4 mr-4 py-3 rounded-md text-lg flex">
+            <button
+              onClick={() => setshow(!show)}
+              className="focus:outline-none bg-orange-custom text-white px-4 mr-4 py-3 rounded-md text-lg flex"
+            >
               Add Library
               <FaRegBookmark className="ml-2 place-self-center" />
             </button>
@@ -72,7 +76,7 @@ function DetailBook(props) {
           <div>
             <NavLink
               to={"/read/" + id}
-              className="bg-gray-200 px-4 flex  py-3 rounded-md text-lg"
+              className="focus:outline-none bg-gray-200 px-4 flex  py-3 rounded-md text-lg"
             >
               Read Book
               <AiOutlineRight className="ml-3 place-self-center" />
@@ -80,6 +84,11 @@ function DetailBook(props) {
           </div>
         </div>
       </div>
+      <Toast
+        toggleToast={() => setshow(!show)}
+        show={show}
+        title="Your book has been added successfully"
+      />
     </>
   );
 }

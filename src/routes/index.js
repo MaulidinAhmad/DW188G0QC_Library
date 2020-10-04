@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Sidebar from "../components/Sidebar";
 import AddBook from "../views/AddBook";
 import DetailBook from "../views/DetailBook";
 import Index from "../views/Index";
