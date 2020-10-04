@@ -35,7 +35,7 @@ function Landing(props) {
               {state.isLogin === "true" ? (
                 <>
                   <button
-                    className="focus:outline-none text-white px-20 py-3 mt-6 rounded-md"
+                    className="focus:outline-none text-white px-20 py-3 mt-8 rounded-md"
                     style={{ background: "#EE4622" }}
                     onClick={() => history.push("/index")}
                   >
@@ -45,14 +45,14 @@ function Landing(props) {
               ) : (
                 <>
                   <button
-                    className="focus:outline-none text-white px-20 py-3 mt-6 rounded-md"
+                    className="focus:outline-none text-white px-20 py-3 mt-8 rounded-md"
                     style={{ background: "#EE4622" }}
                     onClick={() => setsignup(!signup)}
                   >
                     Sign Up
                   </button>
                   <button
-                    className="focus:outline-none px-20 py-3 mt-6 rounded-md"
+                    className="focus:outline-none px-20 py-3 mt-8 rounded-md"
                     style={{ background: "rgba(233, 233, 233, 0.7)" }}
                     onClick={() => setlogin(!login)}
                   >

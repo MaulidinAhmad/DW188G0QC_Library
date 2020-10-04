@@ -605,6 +605,8 @@ video {
   }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -17218,7 +17220,6 @@ video {
 .sub-title {
   /* width: 500px;
     height: 107px; */
-  font-family: sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;

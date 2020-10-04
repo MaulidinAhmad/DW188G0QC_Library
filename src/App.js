@@ -6,7 +6,7 @@ import { LoginContextProvider } from "./context/loginContext";
 function App() {
   return (
     <LoginContextProvider>
-      <div className="antialiased">
+      <div className="antialiased" style={{ fontFamily: "Nunito" }}>
         <BrowserRouter>
           <Routes />
         </BrowserRouter>
