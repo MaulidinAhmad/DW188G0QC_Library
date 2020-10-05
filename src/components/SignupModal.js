@@ -116,9 +116,16 @@ export default function SignupModal(props) {
                   <div className="flex items-center w-full justify-center px-10 pb-6  rounded-b">
                     <p>
                       Already have an account ? klik<span> </span>
-                      <a href="/" className="ml-1">
+                      <span
+                        onClick={() => {
+                          props.toggleHandler();
+                          props.toggleLogin();
+                        }}
+                        href="/"
+                        className="ml-1 cursor-pointer"
+                      >
                         Here
-                      </a>
+                      </span>
                     </p>
                   </div>
                 </div>

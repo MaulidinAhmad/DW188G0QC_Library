@@ -71,8 +71,16 @@ function Landing(props) {
           ></div>
         </div>
       </div>
-      <SignupModal toggleHandler={() => setsignup(!signup)} toggle={signup} />
-      <LoginModal toggleHandler={() => setlogin(!login)} toggle={login} />
+      <SignupModal
+        toggleLogin={() => setlogin(!login)}
+        toggleHandler={() => setsignup(!signup)}
+        toggle={signup}
+      />
+      <LoginModal
+        toggleSignup={() => setsignup(!signup)}
+        toggleHandler={() => setlogin(!login)}
+        toggle={login}
+      />
     </>
   );
 }
